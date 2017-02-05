@@ -1,10 +1,10 @@
-import { CardsPage } from './app.po';
+import { LearningCardsPage } from './app.po';
 
-describe('cards App', function() {
-  let page: CardsPage;
+describe('learning-cards App', function() {
+  let page: LearningCardsPage;
 
   beforeEach(() => {
-    page = new CardsPage();
+    page = new LearningCardsPage();
   });
 
   it('should display message saying app works', () => {

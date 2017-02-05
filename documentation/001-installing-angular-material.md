@@ -6,6 +6,9 @@ $ npm install --save @angular/material
 ```
 
 Import the installed package on the file `src/app/app.module.ts`:
+
+![](001.import-material-design.gif?raw=true)
+
 ```
 import { MaterialModule } from '@angular/material';
 // other imports 
@@ -21,7 +24,7 @@ export class AppModule { }
 To use a pre-built material theme, open the file `src/styles.css` and add the following line: 
 
 ```sh
-@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css’;
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
 ```
 
 More information on the [guide](https://material.angular.io/guide/theming). 

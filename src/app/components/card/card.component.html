@@ -2,40 +2,35 @@
 <div fxLayout="row" fxLayoutAlign="center center">
 
   <md-card>
-
+    
+    <!-- Card Header -->
     <div fxLayout="row" fxLayoutAlign="start start" fxLayoutAlign.gt-md="center start">
-
       <div fxFlex fxFlex.gt-md="80%">
-        <md-card-subtitle><i>Lesson 1 of 6</i></md-card-subtitle>
-        <md-card-title>Simple text</md-card-title>  
+
+        <md-card-subtitle><i> {{ lesson }} </i></md-card-subtitle>
+        <md-card-title> {{ title }} </md-card-title>  
 
         <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
-          <!--<img md-card-avatar [src]="https://material.angular.io/assets/img/examples/shiba2.jpg">-->
-          <md-icon class="avatar">account_circle</md-icon>
-          <span style="font-weight: 500;">Wilfried Ifland</span>
+
+          <img *ngIf="avatarUrl" md-card-avatar [src]="avatarUrl">
+          <md-icon *ngIf="!avatarUrl" class="avatar" >account_circle</md-icon>
+          <span style="font-weight: 500;">{{ user }}</span>
         </div>
 
         <hr width="200px" size="5px" align="left" color="orange" style="margin-top: 50px;">
-
       </div>
     </div>
 
     <md-progress-bar
-      [mode]="determinate"
-      [value]="value"
+      [value]="progress"
       style="margin-top: 50px; margin-bottom: 50px">
     </md-progress-bar>
 
+    <!-- Card Content -->
     <md-card-content>
       <div fxLayout="row" fxLayoutAlign="start start" fxLayoutAlign.gt-md="center start">
         <div fxFlex fxFlex.gt-md="80%">
-
-        <p>Ut nostrud nostrud laboris reprehenderit officia reprehenderit irure. Reprehenderit id magna irure sit. Incididunt aute elit dolore pariatur do irure. Mollit officia est adipisicing voluptate tempor pariatur quis nulla minim. Sint eiusmod sint deserunt laboris Lorem eu amet do nisi minim quis aliqua.
-        </p>
-
-        <p>Magna do veniam do commodo ad exercitation fugiat proident elit reprehenderit occaecat do. Consectetur consectetur eu voluptate Lorem consequat sit ipsum aute eu veniam. Nostrud consectetur amet ea enim magna velit duis minim. Fugiat nulla mollit laborum sunt magna laborum. Eu pariatur sit ea nulla incididunt exercitation qui mollit. Consectetur est ut exercitation cillum ut exercitation sunt.
-        </p>
-
+          <div [innerHTML]="contentHTML"></div>
         </div>
       </div>
 

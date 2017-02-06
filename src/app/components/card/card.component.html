@@ -1,13 +1,48 @@
-  <md-card fxFlex="80%">
-    <md-card-title>Standard Card with Actions</md-card-title>
-    <md-card-subtitle>Subtitle</md-card-subtitle>
+
+<div fxLayout="row" fxLayoutAlign="center center" style="margin: 24px 0;">
+
+  <md-card fxFlex="90%">
+
+    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutAlign.gt-md="center start" style="margin: 24px 0;">
+
+      <div fxFlex fxFlex.gt-md="80%">
+        <md-card-subtitle><i>Lesson 1 of 6</i></md-card-subtitle>
+        <md-card-title>Simple text</md-card-title>  
+
+        <!--style="border: 5px solid red;"-->
+
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+          <!--<img md-card-avatar src="https://material.angular.io/assets/img/examples/shiba2.jpg">-->
+          <md-icon>account_circle</md-icon>
+          <span style="font-weight: 500;">Wilfried Ifland</span>
+        </div>
+
+        <hr width="200" size="5" align="left" color="orange" style="margin-top: 30px; margin-bottom: 30px">
+      </div>
+    </div>
+
     <md-card-content>
+
+      <md-progress-bar
+          [mode]="determinate"
+          [value]="value">
+      </md-progress-bar>
+
+    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutAlign.gt-md="center start" style="margin: 24px 0;">
+      <div fxFlex fxFlex.gt-md="80%">
+
       <p>Old there any widow law rooms. Agreed but expect repair she nay sir silent person. Direction
         can dependent one bed situation attempted. His she are man their spite avoid. Her pretended
         fulfilled extremely education yet. Satisfied did one admitting incommode tolerably how are. </p>
+
+      </div>
+    </div>
+
     </md-card-content>
+
     <md-card-actions align="end">
-      <button md-button>Cancel</button>
-      <button color="primary" md-raised-button>Action</button>
+      <button color="primary" md-raised-button>Flip</button>
     </md-card-actions>
+
   </md-card>
+</div>

@@ -4,7 +4,7 @@ To create a component using material design card, first lets create a new compon
 To organize the project lets create a folder called `components` inside `src/app`
 
 
-![](002.generate-card.gif?raw=true)
+![](images/002.generate-card.gif?raw=true)
 
 ```sh
 $ cd src/app
@@ -21,7 +21,7 @@ Check the file `card.component.ts`, a selector `app-card` was set to this compon
 
 Edit the file `src/app/app.component.html`, adding the folloing lines (you can also remove the title tag):
 
-![](002.insert-card-component.gif?raw=true)
+![](images/002.insert-card-component.gif?raw=true)
 
 ```sh
 <app-card></app-card>
@@ -35,7 +35,7 @@ As we imported the material design package in `app.module.ts` we can use any of 
 
 Open the file `card.component.html` and change it to a sample card:
 
-![](002.material-design-card.gif?raw=true)
+![](images/002.material-design-card.gif?raw=true)
 
 ```
   <md-card fxFlex="80%">

@@ -7,7 +7,7 @@ $ npm install --save @angular/material
 
 Import the installed package on the file `src/app/app.module.ts`:
 
-![](001.import-material-design.gif?raw=true)
+![](images/001.import-material-design.gif?raw=true)
 
 ```
 import { MaterialModule } from '@angular/material';

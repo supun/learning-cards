@@ -1,47 +1,51 @@
 
-<div fxLayout="row" fxLayoutAlign="center center" style="margin: 24px 0;">
+<div fxLayout="row" fxLayoutAlign="center center">
 
-  <md-card fxFlex="90%">
+  <md-card>
 
-    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutAlign.gt-md="center start" style="margin: 24px 0;">
+    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutAlign.gt-md="center start">
 
       <div fxFlex fxFlex.gt-md="80%">
         <md-card-subtitle><i>Lesson 1 of 6</i></md-card-subtitle>
         <md-card-title>Simple text</md-card-title>  
 
-        <!--style="border: 5px solid red;"-->
-
         <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
-          <!--<img md-card-avatar src="https://material.angular.io/assets/img/examples/shiba2.jpg">-->
-          <md-icon>account_circle</md-icon>
+          <!--<img md-card-avatar [src]="https://material.angular.io/assets/img/examples/shiba2.jpg">-->
+          <md-icon class="avatar">account_circle</md-icon>
           <span style="font-weight: 500;">Wilfried Ifland</span>
         </div>
 
-        <hr width="200" size="5" align="left" color="orange" style="margin-top: 30px; margin-bottom: 30px">
+        <hr width="200px" size="5px" align="left" color="orange" style="margin-top: 50px;">
+
       </div>
     </div>
+
+    <md-progress-bar
+      [mode]="determinate"
+      [value]="value"
+      style="margin-top: 50px; margin-bottom: 50px">
+    </md-progress-bar>
 
     <md-card-content>
+      <div fxLayout="row" fxLayoutAlign="start start" fxLayoutAlign.gt-md="center start">
+        <div fxFlex fxFlex.gt-md="80%">
 
-      <md-progress-bar
-          [mode]="determinate"
-          [value]="value">
-      </md-progress-bar>
+        <p>Ut nostrud nostrud laboris reprehenderit officia reprehenderit irure. Reprehenderit id magna irure sit. Incididunt aute elit dolore pariatur do irure. Mollit officia est adipisicing voluptate tempor pariatur quis nulla minim. Sint eiusmod sint deserunt laboris Lorem eu amet do nisi minim quis aliqua.
+        </p>
 
-    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutAlign.gt-md="center start" style="margin: 24px 0;">
-      <div fxFlex fxFlex.gt-md="80%">
+        <p>Magna do veniam do commodo ad exercitation fugiat proident elit reprehenderit occaecat do. Consectetur consectetur eu voluptate Lorem consequat sit ipsum aute eu veniam. Nostrud consectetur amet ea enim magna velit duis minim. Fugiat nulla mollit laborum sunt magna laborum. Eu pariatur sit ea nulla incididunt exercitation qui mollit. Consectetur est ut exercitation cillum ut exercitation sunt.
+        </p>
 
-      <p>Old there any widow law rooms. Agreed but expect repair she nay sir silent person. Direction
-        can dependent one bed situation attempted. His she are man their spite avoid. Her pretended
-        fulfilled extremely education yet. Satisfied did one admitting incommode tolerably how are. </p>
-
+        </div>
       </div>
-    </div>
 
     </md-card-content>
 
-    <md-card-actions align="end">
-      <button color="primary" md-raised-button>Flip</button>
+    <md-card-actions>
+      <div fxLayout="row">
+        <span fxFlex></span>
+        <button color="primary" md-raised-button>Flip</button>
+      </div>
     </md-card-actions>
 
   </md-card>

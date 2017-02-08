@@ -1,5 +1,6 @@
 # Installing Angular Material
-Install [Angular Material Design](https://material.angular.io/guide/getting-started) using npm:
+
+Follow the steps in [Angular Material Guide](https://material.angular.io/guide/getting-started) to install Angular Material:
 
 ```sh
 $ npm install --save @angular/material
@@ -17,6 +18,32 @@ import { MaterialModule } from '@angular/material';
   ...
 })
 export class AppModule { }
+```
+
+#### Install HammerJS
+
+Installing hammerjs with npm:
+
+```sh
+$ npm install --save hammerjs 
+$ npm install --save-dev @types/hammerjs
+```
+
+Import HammerJS on `app.module.js`
+
+```
+import 'hammerjs';
+```
+
+Add hammerjs to the types section of `tsconfig.json` file:
+```
+{
+  "compilerOptions": {
+    "types": [
+      "hammerjs"
+    ]
+  }
+}
 ```
 
 #### Include a theme style

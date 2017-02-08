@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  user: string = "Wilfried Ifland";
+  userName: string = "Wilfried Ifland";
   avatarUrl: string;
 
-  progress: number = 50;
+  progress: number = 0;
   lesson: string = "Lesson 1 of 6";
 
   title: string = "Simple text";

@@ -141,9 +141,9 @@ Look in the [flex-layout documentation](https://github.com/angular/flex-layout/w
 </div>
 ```
 
-Your layout should be like this in big devices:
+##### Layout in big devices:
 ![](images/003.layout-big.png?raw=true)
 
-And like this on small and mediuns:
+##### Layout in big devices small and mediuns
 ![](images/003.layout-small.png?raw=true)
 

@@ -9,11 +9,11 @@
     <!-- fxLayout row to contain the header fields -->
     <!-- The inner components will be aligned in the left and top of the fxLayout except
     for devices greated than medium, when they will align in the center and top  -->
-    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutAlign.gt-md="center start">
+    <div fxLayout="row" fxLayoutAlign="start start" fxLayoutAlign.gt-sm="center start">
 
       <!-- this div will fill 100% of the fxLayot, except
       for devices greated than medium, when it will fill 80%  -->
-      <div fxFlex fxFlex.gt-md="80%">
+      <div fxFlex fxFlex.gt-sm="80%">
 
         <md-card-subtitle><i> {{ lesson }} </i></md-card-subtitle>
         <md-card-title> {{ title }} </md-card-title>  
@@ -45,8 +45,8 @@
 
       <!-- fxLayot follows the header definition -->
       
-      <div fxLayout="row" fxLayoutAlign="start start" fxLayoutAlign.gt-md="center start">
-        <div fxFlex fxFlex.gt-md="80%">
+      <div fxLayout="row" fxLayoutAlign="start start" fxLayoutAlign.gt-sm="center start">
+        <div fxFlex fxFlex.gt-sm="80%">
           <div [innerHTML]="contentHTML"></div>
         </div>
       </div>

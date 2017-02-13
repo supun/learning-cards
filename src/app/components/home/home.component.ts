@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   private _mediaSubscription: Subscription;
   sidenavOpen: boolean = false;
   sidenavMode: string = 'side';
+  sideNavToggled: boolean = false;
   isMobile: boolean = false;
 
   // private _routerEventsSubscription: Subscription;
@@ -28,12 +29,18 @@ export class HomeComponent implements OnInit {
 
       this.isMobile = isMobile;
       this.sidenavMode = (isMobile) ? 'over' : 'side';
-      this.sidenavOpen = !isMobile;
+
+      if (this.sideNavToggled) {
+        this.sidenavOpen = !isMobile;
+
+      }
+      
     });
 
   }
 
   toggle(){
+    this.sideNavToggled = ! this.sideNavToggled;
     this.sidenavOpen = ! this.sidenavOpen;
   }
 

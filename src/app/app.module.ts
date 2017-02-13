@@ -9,6 +9,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
+
+import { RoutingModule } from './app.routing.module';
+
+import { HomeComponent } from './components/home/home.component';
 import { CardComponent } from './components/card/card.component';
 import { MenuComponent } from './components/menu/menu.component';
 
@@ -17,11 +21,13 @@ import { MenuComponent } from './components/menu/menu.component';
     AppComponent,
     CardComponent,
     MenuComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    RoutingModule,
     MaterialModule.forRoot(),
     FlexLayoutModule.forRoot()
   ],

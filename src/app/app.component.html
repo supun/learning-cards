@@ -1,32 +1,3 @@
 
-<md-sidenav-container>
-
-    <md-sidenav [opened]=sidenavOpen [mode]="sidenavMode"> 
-        <!-- Menu header -->
-        <md-toolbar fxFlex color="primary">
-            <h2>Text</h2>
-            <md-toolbar-row>
-                <md-progress-bar 
-                    [value]="100"
-                    ></md-progress-bar>
-            </md-toolbar-row>
-            <md-toolbar-row>
-                <h5>100% complete</h5>
-            </md-toolbar-row>
-        </md-toolbar>
-
-        <!-- Menu list -->
-        <app-menu></app-menu>
-    </md-sidenav>
-
-    <div class="my-content">
-        <md-toolbar style="background-color: white;">
-            <md-icon (click)="toggle()">menu</md-icon>
-        </md-toolbar>
-
-        <!-- Router outlet -->
-        <app-card></app-card>
-    </div>
-
-</md-sidenav-container>
+<router-outlet></router-outlet>
 

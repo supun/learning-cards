@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+
+import { Subscription } from "rxjs";
+import { MediaChange } from "@angular/flex-layout";
+import { ObservableMediaService } from "@angular/flex-layout/media-query/observable-media-service";
 
 @Component({
   selector: 'app-root',
@@ -6,9 +10,30 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  sideNavOpened = false;
+
+  private _mediaSubscription: Subscription;
+  sidenavOpen: boolean = false;
+  sidenavMode: string = 'side';
+  isMobile: boolean = false;
+
+  private _routerEventsSubscription: Subscription;
+
+  constructor(
+    @Inject(ObservableMediaService) private _media$
+  ) { }
+
+  ngOnInit() {
+    this._mediaSubscription = this._media$.subscribe((change: MediaChange) => {
+      let isMobile = (change.mqAlias == 'xs') || (change.mqAlias == 'sm');
+
+      this.isMobile = isMobile;
+      this.sidenavMode = (isMobile) ? 'over' : 'side';
+      this.sidenavOpen = !isMobile;
+    });
+
+  }
 
   toggle(){
-    this.sideNavOpened = ! this.sideNavOpened;
+    this.sidenavOpen = ! this.sidenavOpen;
   }
 }

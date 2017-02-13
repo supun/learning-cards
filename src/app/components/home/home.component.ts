@@ -32,7 +32,6 @@ export class HomeComponent implements OnInit {
 
       if (this.sideNavToggled) {
         this.sidenavOpen = !isMobile;
-
       }
       
     });
@@ -42,6 +41,10 @@ export class HomeComponent implements OnInit {
   toggle(){
     this.sideNavToggled = ! this.sideNavToggled;
     this.sidenavOpen = ! this.sidenavOpen;
+  }
+
+  close(){
+    this.sidenavOpen = false;
   }
 
   ngOnDestroy() {

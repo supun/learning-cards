@@ -1,7 +1,7 @@
 
 <md-sidenav-container>
 
-    <md-sidenav [opened]=sidenavOpen [mode]="sidenavMode"> 
+    <md-sidenav [opened]=sidenavOpen [mode]="sidenavMode" (close)="close($event)" > 
         <!-- Menu header -->
         <md-toolbar color="primary">
             <h2>Text</h2>

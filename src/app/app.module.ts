@@ -10,11 +10,13 @@ import 'hammerjs';
 
 import { AppComponent } from './app.component';
 import { CardComponent } from './components/card/card.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardComponent
+    CardComponent,
+    MenuComponent,
   ],
   imports: [
     BrowserModule,

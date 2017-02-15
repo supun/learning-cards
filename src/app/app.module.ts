@@ -14,14 +14,16 @@ import { RoutingModule } from './app.routing.module';
 
 import { HomeComponent } from './components/home/home.component';
 import { CardComponent } from './components/card/card.component';
-import { MenuComponent } from './components/menu/menu.component';
+import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
-    MenuComponent,
     HomeComponent,
+    ToolbarComponent,
+    SidenavComponent,
   ],
   imports: [
     BrowserModule,

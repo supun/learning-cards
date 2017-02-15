@@ -1,8 +1,6 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
-import { Subscription } from "rxjs";
-import { MediaChange } from "@angular/flex-layout";
-import { ObservableMediaService } from "@angular/flex-layout/media-query/observable-media-service";
+import { MdSidenav } from '@angular/material';
 
 @Component({
   selector: 'app-home',
@@ -11,45 +9,15 @@ import { ObservableMediaService } from "@angular/flex-layout/media-query/observa
 })
 export class HomeComponent implements OnInit {
 
-  private _mediaSubscription: Subscription;
-  sidenavOpen: boolean = false;
-  sidenavMode: string = 'side';
-  sideNavToggled: boolean = false;
-  isMobile: boolean = false;
+  @ViewChild('sidenav') 
+  sidenav : MdSidenav;
 
-  // private _routerEventsSubscription: Subscription;
-
-  constructor(
-    @Inject(ObservableMediaService) private _media$
-  ) { }
+  constructor() { }
 
   ngOnInit() {
-    this._mediaSubscription = this._media$.subscribe((change: MediaChange) => {
-      let isMobile = (change.mqAlias == 'xs') || (change.mqAlias == 'sm');
-
-      this.isMobile = isMobile;
-      this.sidenavMode = (isMobile) ? 'over' : 'side';
-
-      if (this.sideNavToggled) {
-        this.sidenavOpen = !isMobile;
-      }
-      
-    });
-
   }
 
-  toggle(){
-    this.sideNavToggled = ! this.sideNavToggled;
-    this.sidenavOpen = ! this.sidenavOpen;
+  onClicked(){
+    this.sidenav.toggle();
   }
-
-  close(){
-    this.sidenavOpen = false;
-  }
-
-  ngOnDestroy() {
-    this._mediaSubscription.unsubscribe();
-  }
-
-
 }

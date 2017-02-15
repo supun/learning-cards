@@ -1,35 +1,11 @@
-
 <md-sidenav-container>
+  <md-sidenav #sidenav>
+    <app-sidenav></app-sidenav>
+  </md-sidenav>
 
-    <md-sidenav [opened]=sidenavOpen [mode]="sidenavMode" (close)="close($event)" > 
-        <!-- Menu header -->
-        <md-toolbar color="primary">
-            <h2>Text</h2>
-            <md-toolbar-row>
-                <md-progress-bar 
-                    [value]="100">
-                </md-progress-bar>
-            </md-toolbar-row>
-            <md-toolbar-row>
-                <h5>100% complete</h5>
-            </md-toolbar-row>
-        </md-toolbar>
-
-        <!-- Menu list -->
-        <app-menu></app-menu>
-    </md-sidenav>
-
-    <div class="my-content">
-        <md-toolbar style="background-color: white;">
-        
-            <button md-icon-button (click)="toggle()">
-                <md-icon>menu</md-icon>
-            </button>
-
-        </md-toolbar>
-
-        <!-- Router outlet -->
-        <app-card></app-card>
-    </div>
+    <!-- Main content -->
+    <app-toolbar (toggle)="onClicked($event)" ></app-toolbar>
+    <app-card></app-card>
 
 </md-sidenav-container>
+

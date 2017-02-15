@@ -1,0 +1,35 @@
+<!-- Sidebar Header -->
+<div fxLayout="row" style="background-color: orange" fxLayoutAlign="center start">
+
+  <div fxFlex="80%">  
+    <h2>Text</h2>
+    <md-progress-bar 
+        [value]="100">
+    </md-progress-bar>
+    <span>100% complete</span>
+    <br>
+    <br>
+  </div>
+</div>
+
+<!-- Lessons list -->
+<md-nav-list>
+  <a md-list-item>
+    <md-icon md-list-icon>format_align_left</md-icon>
+    <span>Simple text</span>
+    <span fxFlex><!-- fill space --></span>
+    <button md-icon-button (click)="checkLesson()">
+      <md-icon>check_circle</md-icon>
+    </button>
+  </a>
+
+  <a md-list-item>
+    <md-icon md-list-icon>format_align_left</md-icon>
+    <span>Simple text 2</span>
+    <span fxFlex><!-- fill space --></span>
+    <button md-icon-button (click)="checkLesson()">
+      <md-icon>check_circle</md-icon>
+    </button>
+  </a>
+
+</md-nav-list>

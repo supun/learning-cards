@@ -1,0 +1,47 @@
+.flip3D {
+  background-color: white;
+  margin: 10px;
+  overflow: hidden;
+  display: inline-block;
+}
+.flip3D .front {
+   -webkit-transform: perspective(8000px) rotateY(0deg);
+  transform: perspective(8000px) rotateY(0deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: transform 1s linear 0s;
+  -moz-transition: transform 1s linear 0s;
+  -ms-transition: transform 1s linear 0s;
+  -o-transition: transform 1s linear 0s;
+  transition: transform 1s linear 0s;
+}
+/*.flip3D:hover .front {
+  -webkit-transform: perspective(8000px) rotateY(180deg);
+  transform: perspective(8000px) rotateY(180deg);
+}
+*/
+.flip3D .front.flippedFront {
+     -webkit-transform: perspective(8000px) rotateY(180deg);
+  transform: perspective(8000px) rotateY(180deg);
+}
+.flip3D .back {
+    margin-top: -70px;
+ -webkit-transform: perspective(8000px) rotateY(180deg);
+  transform: perspective(8000px) rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: transform 1s linear 0s;
+  -moz-transition: transform 1s linear 0s;
+  -ms-transition: transform 1s linear 0s;
+  -o-transition: transform 1s linear 0s;
+  transition: transform 1s linear 0s;
+}
+
+/*.flip3D:hover .back {
+  -webkit-transform: perspective(8000px) rotateY(0deg);
+  transform: perspective(8000px) rotateY(0deg);
+}*/
+.flip3D .back.flippedBack {
+    -webkit-transform: perspective(8000px) rotateY(0deg);
+  transform: perspective(8000px) rotateY(0deg);
+}

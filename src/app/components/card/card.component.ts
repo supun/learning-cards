@@ -14,7 +14,8 @@ export class CardComponent implements OnInit {
   lesson: string = "Lesson 1 of 6";
 
   title: string = "Simple text";
-
+  flipFront:string ='';
+  flippedBack:string ='';
   contentHTML: string = `
     <p>Ut nostrud nostrud laboris reprehenderit officia reprehenderit irure. Reprehenderit id magna irure sit. Incididunt aute elit dolore pariatur do irure. Mollit officia est adipisicing voluptate tempor pariatur quis nulla minim. Sint eiusmod sint deserunt laboris Lorem eu amet do nisi minim quis aliqua.</p>
 
@@ -25,5 +26,21 @@ export class CardComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  flipCard(){
+   if(this.flipFront == ''){
+     this.flipFront = 'flippedFront';
+    } else {
+      this.flipFront ='';
+    }
+  
+  if(this.flippedBack == ''){
+     this.flippedBack ='flippedBack';
+    } else {
+       this.flippedBack ='';
+    }
+  
+  }
+
 
 }

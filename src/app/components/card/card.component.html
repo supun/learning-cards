@@ -24,7 +24,7 @@
           <img *ngIf="avatarUrl" md-card-avatar [src]="avatarUrl">
           <md-icon *ngIf="!avatarUrl" style="font-size: 40px; height: 40px; width: 40px; color: #333;" >
             account_circle</md-icon>
-          <span style="font-weight: 500;">{{ userName }}</span>
+          <span style="font-weight: 500;">{{ userName }} CardNumber {{currentCardNumber}} </span>
         </div>
 
         <!-- Divider -->
@@ -63,6 +63,13 @@
         <button color="primary" md-raised-button (click)="flipCard();">Flip</button>
       </div>
     </md-card-actions>
-
+    
+<div fxLayout="row">
+    <md-card-actions *ngFor="let cardNumber of cardList">
+         <span fxFlex></span>
+        <button color="primary" md-raised-button (click)="getCard(cardNumber);">{{cardNumber}}</button>
+    </md-card-actions>
+    </div>
+  
   </md-card>
 </div>

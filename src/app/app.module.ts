@@ -31,7 +31,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     HttpModule,
     RoutingModule,
     MaterialModule.forRoot(),
-    FlexLayoutModule.forRoot()
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

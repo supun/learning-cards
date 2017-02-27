@@ -52,9 +52,9 @@ export class CardComponent implements OnDestroy {
   }
 
   getCard(cardNumber:number){
-this.lessonService.setSelectedLessonItem(cardNumber);
+     this.lessonService.setSelectedLessonItem(cardNumber);
   }
-ngOnDestroy() {
+  ngOnDestroy() {
     // prevent memory leak when component destroyed
     this.subscription.unsubscribe();
   }

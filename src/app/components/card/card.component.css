@@ -96,3 +96,6 @@
     text-align: center;
     overflow: hidden;
 }
+.brand--body, .brand--body * {
+    font-family: Merriweather !important;
+}

@@ -1,6 +1,7 @@
 import { LessonService } from './../../shared/lesson.service';
 import { Component, OnDestroy } from '@angular/core';
 import { Subscription }   from 'rxjs/Subscription';
+import {Observable,Subject} from 'rxjs/Rx';
 
 @Component({
   selector: 'app-card',
@@ -8,7 +9,7 @@ import { Subscription }   from 'rxjs/Subscription';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnDestroy {
-
+  friends:Observable<any>;
   subscription:Subscription;
   cardList:number[] = [1,2,3];
   currentCardNumber:number=1;
@@ -18,7 +19,7 @@ export class CardComponent implements OnDestroy {
   progress: number = 0;
   lesson: string = "Lesson 1 of 6";
 
-  title: string = "Simple text";
+  title: string = "Introduction";
   flipFront:string ='';
   flippedBack:string ='';
   contentHTML: string = `
@@ -32,6 +33,10 @@ export class CardComponent implements OnDestroy {
           cardNumber =>{
             this.currentCardNumber = cardNumber;
      });
+
+     this.lessonService.getLessionsData().subscribe(
+       friends => this.friends = friends.people
+     );
   }
 
   

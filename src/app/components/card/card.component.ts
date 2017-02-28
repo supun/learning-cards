@@ -1,7 +1,8 @@
-import { LessonService } from './../../shared/lesson.service';
 import { Component, OnDestroy } from '@angular/core';
 import { Subscription }   from 'rxjs/Subscription';
 import {Observable,Subject} from 'rxjs/Rx';
+import { Lesson } from './../../shared/model/lesson';
+import { LessonService } from './../../shared/lesson.service';
 
 @Component({
   selector: 'app-card',
@@ -9,15 +10,16 @@ import {Observable,Subject} from 'rxjs/Rx';
   styleUrls: ['./card.component.css']
 })
 export class CardComponent implements OnDestroy {
-  friends:Observable<any>;
+  lessons:Lesson[];
+  lesson:Lesson;
+  nextLesson:Lesson;
   subscription:Subscription;
-  cardList:number[] = [1,2,3];
   currentCardNumber:number=1;
   userName: string = "Wilfried Ifland";
   avatarUrl: string;
 
   progress: number = 0;
-  lesson: string = "Lesson 1 of 6";
+  //lesson: string = "Lesson 1 of 6";
 
   title: string = "Introduction";
   flipFront:string ='';
@@ -30,14 +32,20 @@ export class CardComponent implements OnDestroy {
 
   constructor(private lessonService: LessonService) { 
     this.subscription = lessonService.selectedLessonSource$.subscribe(
-          cardNumber =>{
-            this.currentCardNumber = cardNumber;
-     });
+          lesson =>{
+            this.lesson = lesson;
+    });
 
-     this.lessonService.getLessionsData().subscribe(
-       friends => this.friends = friends.people
-     );
-  }
+     this.subscription = lessonService.loadedLessonSource$.subscribe(
+          lessons =>{
+            this.lessons = lessons;
+    });
+
+     this.subscription = lessonService.nextLessonSource$.subscribe(
+          nextLesson =>{
+            this.nextLesson = nextLesson;
+    });
+  } 
 
   
 
@@ -56,8 +64,12 @@ export class CardComponent implements OnDestroy {
   
   }
 
-  getCard(cardNumber:number){
-     this.lessonService.setSelectedLessonItem(cardNumber);
+  goToLesson(lesson:Lesson){
+     this.lessonService.setSelectedLessonItem(lesson);
+     this.lesson = lesson;
+     if(this.lessons.length>this.lesson.id){
+           this.lessonService.setNextLessonItem(this.lessons[this.lesson.id]);
+  }
   }
   ngOnDestroy() {
     // prevent memory leak when component destroyed

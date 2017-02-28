@@ -1,3 +1,4 @@
+import { Lesson } from './model/lesson';
 import { Component, Input } from '@angular/core';
 import { Injectable }     from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
@@ -10,21 +11,33 @@ import 'rxjs/add/operator/catch';
 export class LessonService {
   constructor(private http:Http) { }
 
-    // Observable string sources
-  private selectedLessonSource = new Subject<number>();
+  // Observable string sources
+  private selectedLessonSource = new Subject<Lesson>();
+  private nextLessonSource = new Subject<Lesson>();
+  private loadedLessonSource = new Subject<Lesson[]>();
 
   // Observable string streams
   selectedLessonSource$ = this.selectedLessonSource.asObservable();
+  nextLessonSource$ = this.nextLessonSource.asObservable();
+  loadedLessonSource$ = this.loadedLessonSource.asObservable();
 
   // Service message commands
-  setSelectedLessonItem(cardId: number) {
-    this.selectedLessonSource.next(cardId);
+  setSelectedLessonItem(lesson:Lesson) {
+    this.selectedLessonSource.next(lesson);
   }
 
-  getLessionsData():Observable<any> {
-    return this.http.get('../data/people.json')
+ setNextLessonItem(lesson:Lesson){
+   this.nextLessonSource.next(lesson);
+ }
+  setLoadedLessonSource(lessons:Lesson[]){
+     this.loadedLessonSource.next(lessons);
+  }
+
+  getLessionsData():Observable<Lesson[]> {
+    return this.http.get('../data/lessons.json')
                   .do(console.log)
-                 .map(res => res.json());
+                 .map(res => res.json().lessons)
+                 .map(Lesson.fromJsonArray);
   }
 
 }

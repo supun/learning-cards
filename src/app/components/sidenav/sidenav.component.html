@@ -1,35 +1,51 @@
 <!-- Sidebar Header -->
-<div fxLayout="row" style="background-color: orange" fxLayoutAlign="center start">
+<div fxLayout="row" class="sideNav" fxLayoutAlign="center start">
 
   <div fxFlex="80%">  
-    <h2>Text</h2>
-    <md-progress-bar 
+    <div class="overview-sidebar__header">
+      <a class="overview-sidebar__title" href="#/">ECMAScript® 2015</a>
+    </div>
+    <div class="overview-sidebar__progress brand--ui"><div class="progress-bar"><div class="progress-bar__line"><div class="progress-bar__fill" style="width: 15%;"></div></div><!-- react-text: 20 -->15<!-- /react-text --><!-- react-text: 21 -->% Complete<!-- /react-text --></div></div>
+<!--<md-progress-bar 
         [value]="100">
     </md-progress-bar>
-    <span>100% complete</span>
-    <br>
-    <br>
+    <span>100% complete</span>-->
   </div>
 </div>
 
 <!-- Lessons list -->
-<md-nav-list>
-  <a md-list-item  *ngFor="let lesson of lessons">
+<div class="overview-sidebar__content">
+    <md-nav-list class="lesson-lists">
+<!--<a class="lesson-link" md-list-item  *ngFor="let lesson of lessons">
     <md-icon md-list-icon>format_align_left</md-icon>
     <span class="brand--ui" (click)="goToLesson(lesson)">{{lesson.title}}</span>
-    <span fxFlex><!-- fill space --></span>
-    <button md-icon-button (click)="checkLesson()">
-      <md-icon>check_circle</md-icon>
-    </button>
-  </a>
-
-  <!--<a md-list-item>
-    <md-icon md-list-icon>format_align_left</md-icon>
-    <span class="brand--ui" (click)="goToLesson(2)">Simple text 2</span>
     <span fxFlex></span>
-    <button md-icon-button (click)="checkLesson()">
+   <!-- <button md-icon-button (click)="checkLesson()">
       <md-icon>check_circle</md-icon>
     </button>
   </a>-->
-
+  <li class="lesson-lists__item" md-list-item  *ngFor="let lesson of lessons">
+    <a class="lesson-link">
+       <div class="lesson-link__icon">
+          <svg viewBox="0 0 16 12" width="16" height="12" class="svgIcon svgIcon--alignLeft">
+             <title>Align left</title>
+               <desc>Three vertical lines aligned to the left</desc>
+               <g><path d="M8.4148147,12 L1.05185184,12 C0.471229623,12 0,11.552 0,11 C0,10.448 0.471229623,10 1.05185184,10 L8.4148147,10 C8.99543692,10 9.46666654,10.448 9.46666654,11 C9.46666654,11.552 8.99543692,12 8.4148147,12"></path><path d="M12.2500002,2 L0.816666683,2 C0.365866674,2 0,1.552 0,1 C0,0.448 0.365866674,0 0.816666683,0 L12.2500002,0 C12.7008002,0 13.0666669,0.448 13.0666669,1 C13.0666669,1.552 12.7008002,2 12.2500002,2"></path><path d="M15,7 L1,7 C0.448,7 0,6.552 0,6 C0,5.448 0.448,5 1,5 L15,5 C15.552,5 16,5.448 16,6 C16,6.552 15.552,7 15,7"></path>
+               </g></svg>
+      </div>
+      <div class="lesson-link__name brand--ui">{{lesson.title}}</div>
+      <div class="lesson-link__progress">
+          <div class="pie-progress">
+              <svg class="pie-progress__pie" width="21px" height="21px">
+                <circle class="pie-progress__border pie-progress__border--completed" cx="10.5" cy="10.5" r="8.5"></circle>
+                <circle class="pie-progress__progress brand--stroke brand--fill-opacity brand--fill" cx="10.5" cy="10.5" r="8.5" stroke-dasharray="53.407" stroke-dashoffset="0">
+                  </circle>
+              </svg>
+              <i class="pie-progress__check icon icon-Master-05 pie-progress__check--completed"></i>
+              </div>
+      </div>
+      </a>
+      </li>
 </md-nav-list>
+
+</div>

@@ -16,7 +16,7 @@ export class CardComponent implements OnDestroy {
   subscription:Subscription;
   currentCardNumber:number=1;
   userName: string = "Wilfried Ifland";
-  avatarUrl: string;
+  avatarUrl: string = 'assets/small.png';
 
   progress: number = 0;
   //lesson: string = "Lesson 1 of 6";
@@ -24,10 +24,7 @@ export class CardComponent implements OnDestroy {
   title: string = "Introduction";
   flipFront:string ='';
   flippedBack:string ='';
-  contentHTML: string = `
-    <p>Ut nostrud nostrud laboris reprehenderit officia reprehenderit irure. Reprehenderit id magna irure sit. Incididunt aute elit dolore pariatur do irure. Mollit officia est adipisicing voluptate tempor pariatur quis nulla minim. Sint eiusmod sint deserunt laboris Lorem eu amet do nisi minim quis aliqua.</p>
-
-    <p>Magna do veniam do commodo ad exercitation fugiat proident elit reprehenderit occaecat do. Consectetur consectetur eu voluptate Lorem consequat sit ipsum aute eu veniam. Nostrud consectetur amet ea enim magna velit duis minim. Fugiat nulla mollit laborum sunt magna laborum. Eu pariatur sit ea nulla incididunt exercitation qui mollit. Consectetur est ut exercitation cillum ut exercitation sunt.</p>
+  contentHTML: string = `<p>This Ecma Standard defines the ECMAScript 2015 Language. It is the<b> sixth</b> <b>edition</b> of the ECMAScript Language Specification. Since publication of the first edition in 1997, ECMAScript has grown to be one of the world’s most widely used general purpose programming languages. It is best known as the language embedded in web browsers but has also been widely adopted for server and embedded applications. The<b> sixth edition</b> is the most extensive update to ECMAScript since the publication of the first edition in 1997.<br></p><p>ECMAScript is based on several originating technologies, the most well-known being JavaScript (Netscape) and JScript (Microsoft). The language was invented by Brendan Eich<br></p><p><i><a href="http://www.ecma-international.org/ecma-262/6.0/" target="_blank">http://www.ecma-international.org/ecma-262/6.0/</a></i><br></p><p><br></p>
   `;
 
   constructor(private lessonService: LessonService) { 

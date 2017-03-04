@@ -1,4 +1,4 @@
-.flip3D {
+/*.flip3D {
   background-color: white;
   margin: 10px;
   overflow: hidden;
@@ -19,7 +19,7 @@
   -webkit-transform: perspective(8000px) rotateY(180deg);
   transform: perspective(8000px) rotateY(180deg);
 }
-*/
+
 .flip3D .front.flippedFront {
      -webkit-transform: perspective(8000px) rotateY(180deg);
   transform: perspective(8000px) rotateY(180deg);
@@ -37,16 +37,75 @@
   transition: transform 1s linear 0s;
 }
 
-/*.flip3D:hover .back {
+.flip3D:hover .back {
   -webkit-transform: perspective(8000px) rotateY(0deg);
   transform: perspective(8000px) rotateY(0deg);
-}*/
+}
 .flip3D .back.flippedBack {
     -webkit-transform: perspective(8000px) rotateY(0deg);
   transform: perspective(8000px) rotateY(0deg);
 }
-.next-lesson{
-  cursor: pointer;
+*/
+.lesson-header__counter {
+    margin-bottom: 1.2rem;
+    line-height: 1.75;
+    font-size: 1.2rem;
+    font-family: Merriweather !important;
+    font-style: italic;
+    font-weight: 400
+}
+.lesson-header__title {
+    position: relative;
+    margin-bottom: 2rem;
+    font-size: 4.2rem;
+    font-weight: 700 !important;
+    font-family: Lato !important;
+    line-height: 1;
+    color: #2d363a;
+}
+.lesson-header__author {
+    margin: 0 0 2rem;
+    font-size: 1.3rem;
+    line-height: 3.8rem;
+    font-weight: 700;
+    color: #a2acb0;
+    font-family: Lato !important;
+}
+.lesson-header__author img {
+    width: 3.8rem;
+    height: 3.8rem;
+    border: 1px solid #fff;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin-right: .5rem;
+}
+.lesson-divider{
+    height: .5rem;
+    background-color: #FF631E !important;
+    margin-top: 50px;
+} 
+
+.brand--linkColor p i a {
+    color: #FF631E !important;
+}
+.block-text{
+        display: block;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        float: left;
+        width: 83.33333%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        min-height: 1px;
+        font-family: Merriweather !important;
+        padding-bottom: 12rem;
+}
+.block-text p {
+    margin-bottom: 3.4rem;
+    font-size: 1.7rem;
+    font-weight: 400;
+    line-height: 1.941176470588235;
 }
 .next-lesson__link {
     text-decoration: none;
@@ -69,33 +128,46 @@
     -ms-flex-pack: center;
     justify-content: center;
     height: 100%;
-    color: rgba(49,53,55,.6);
+    color: rgba(49, 53, 55, .6);
     border-top: .1rem solid #ddd;
     background: #f0f0f0;
     -webkit-transition: color .3s;
-    transition: color .3s;
+    transition: color .3s
 }
-
-.brand--ui, .brand--ui * {
-    font-family: Lato !important;
+.next-lesson__link .svgIcon {
+    fill: rgba(49, 53, 55, .6);
+    -webkit-transition: fill .3s;
+    transition: fill .3s
+}
+.next-lesson__link:hover {
+    color: #FF631E !important;
+}
+.next-lesson__link:hover .svgIcon {
+    fill: inherit;
 }
 .next-lesson__title {
     font-weight: 900;
     text-align: center;
-    font-size: 0.6rem;
-    color: rgba(49,53,55,.2);
+    font-size: 1rem;
+    color: rgba(49, 53, 55, .2);
     text-transform: uppercase;
+    font-family: Lato !important;
+}
+.next-lesson__link:hover {
+    color: #50abf1
 }
 .next-lesson__name {
     padding: 0 .5rem;
     width: 100%;
-    font-size: 1.0rem;
+    font-size: 1.4rem;
     font-weight: 900;
     white-space: nowrap;
     text-overflow: ellipsis;
     text-align: center;
     overflow: hidden;
+    font-family: Lato !important;
 }
-.brand--body, .brand--body * {
-    font-family: Merriweather !important;
+.next-lesson .svgIcon {
+    width: 1.4rem;
+    height: 1.4rem
 }

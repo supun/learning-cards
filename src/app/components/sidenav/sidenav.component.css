@@ -1,3 +1,51 @@
 .brand--ui, .brand--ui * {
     font-family: Lato !important;
 }
+.sideNav{
+    background-color: #FF631E !important;
+}
+.overview-sidebar__header {
+    position: relative;
+    overflow: hidden;
+    padding: 5rem 3rem 0 2rem;
+    color: #fff;
+    z-index: 1;
+    -webkit-transition-duration: .6s;
+    transition-duration: .6s;
+    -webkit-transition-property: background, padding;
+    transition-property: background, padding;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    font-family: Lato !important;
+}
+.lesson-lists {
+    color: #313537;
+    font-family: merriweather, serif
+}
+.lesson-lists__list {
+    list-style: none;
+    padding-bottom: .1rem;
+    margin-bottom: 3rem
+}
+.lesson-lists__item {
+    position: relative;
+    margin: 0 -3rem 1rem -2rem;
+    font-family: lato, sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+    font-weight: 700;
+    -webkit-transition: color .3s;
+    transition: color .3s;
+    display: block;
+}
+ 
+.overview-sidebar__title {
+    display: block;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 900;
+    font-size: 2.8rem;
+    color: #fff;
+    text-decoration: none
+}

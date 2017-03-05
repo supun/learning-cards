@@ -47,15 +47,11 @@
       <div fxLayout="row" fxLayoutAlign="start start" fxLayoutAlign.gt-sm="center start">
         <div fxFlex fxFlex.gt-sm="60%" class="block-text">
           <div class="brand--linkColor" [innerHTML]="lesson?.description"></div>
-          <!--<div class="flip3D block-text__col brand--body brand--linkColor">
-            <p class="front" [ngClass]="flipFront">{{lesson?.flipContentFront}}</p>
-            <p class="back" [ngClass]="flippedBack">{{lesson?.flipContentBack}}</p>
-          </div>-->
         </div>
       </div>
 </md-card-content>
   <div fxLayout="row" fxLayoutAlign="start start" fxLayoutAlign.gt-sm="center start">
-          <div class="next-lesson brand--linkColorHover"><a class="next-lesson__link"><div class="next-lesson__title brand--ui"><!-- react-text: 300 -->Next <!-- /react-text --><!-- react-text: 301 -->Lesson<!-- /react-text --></div><div class="next-lesson__name brand--ui"><!-- react-text: 303 -->Lesson 2 - <!-- /react-text --><!-- react-text: 304 --> <!-- /react-text --><!-- react-text: 305 -->Overview<!-- /react-text --></div><div class="brand--ui"><svg viewBox="0 0 7 5" width="7" height="5" class="svgIcon svgIcon--chevronDown"><title>More</title><desc>Caret pointing down</desc><g transform="translate(-15 -14)"><path d="M18.1042026,17.8957974 C18.2994647,18.0910596 18.6160472,18.0910596 18.8113094,17.8957974 L21.3535534,15.3535534 C21.5488155,15.1582912 21.5488155,14.8417088 21.3535534,14.6464466 C21.1582912,14.4511845 20.8417088,14.4511845 20.6464466,14.6464466 L18.4734187,16.8508 L16.3535534,14.7309347 C16.1582912,14.5356725 15.8417088,14.5356725 15.6464466,14.7309347 C15.4511845,14.9261968 15.4511845,15.2427793 15.6464466,15.4380415 L18.1042026,17.8957974 Z"></path></g></svg></div></a></div>
+          <div class="next-lesson brand--linkColorHover" (click)="goToLesson(nextLesson);"><a class="next-lesson__link"><div class="next-lesson__title brand--ui"><!-- react-text: 300 -->Next <!-- /react-text --><!-- react-text: 301 -->Lesson<!-- /react-text --></div><div class="next-lesson__name brand--ui"><!-- react-text: 303 -->Lesson {{nextLesson?.id}} -<!-- /react-text --><!-- react-text: 304 --> <!-- /react-text --><!-- react-text: 305 -->{{nextLesson?.title}}<!-- /react-text --></div><div class="brand--ui"><svg viewBox="0 0 7 5" width="7" height="5" class="svgIcon svgIcon--chevronDown"><title>More</title><desc>Caret pointing down</desc><g transform="translate(-15 -14)"><path d="M18.1042026,17.8957974 C18.2994647,18.0910596 18.6160472,18.0910596 18.8113094,17.8957974 L21.3535534,15.3535534 C21.5488155,15.1582912 21.5488155,14.8417088 21.3535534,14.6464466 C21.1582912,14.4511845 20.8417088,14.4511845 20.6464466,14.6464466 L18.4734187,16.8508 L16.3535534,14.7309347 C16.1582912,14.5356725 15.8417088,14.5356725 15.6464466,14.7309347 C15.4511845,14.9261968 15.4511845,15.2427793 15.6464466,15.4380415 L18.1042026,17.8957974 Z"></path></g></svg></div></a></div>
   </div>
   </md-card>
 </div>

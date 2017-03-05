@@ -34,7 +34,7 @@ export class LessonService {
   }
 
   getLessionsData():Observable<Lesson[]> {
-    return this.http.get('../data/lessons.json')
+    return this.http.get('../environments/lessons.json')
                   .do(console.log)
                  .map(res => res.json().lessons)
                  .map(Lesson.fromJsonArray);

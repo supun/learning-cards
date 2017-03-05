@@ -25,7 +25,7 @@
     </button>
   </a>-->
   <li class="lesson-lists__item" md-list-item  *ngFor="let lesson of lessons">
-    <a class="lesson-link">
+    <a class="lesson-link" >
        <div class="lesson-link__icon">
           <svg viewBox="0 0 16 12" width="16" height="12" class="svgIcon svgIcon--alignLeft">
              <title>Align left</title>
@@ -33,7 +33,7 @@
                <g><path d="M8.4148147,12 L1.05185184,12 C0.471229623,12 0,11.552 0,11 C0,10.448 0.471229623,10 1.05185184,10 L8.4148147,10 C8.99543692,10 9.46666654,10.448 9.46666654,11 C9.46666654,11.552 8.99543692,12 8.4148147,12"></path><path d="M12.2500002,2 L0.816666683,2 C0.365866674,2 0,1.552 0,1 C0,0.448 0.365866674,0 0.816666683,0 L12.2500002,0 C12.7008002,0 13.0666669,0.448 13.0666669,1 C13.0666669,1.552 12.7008002,2 12.2500002,2"></path><path d="M15,7 L1,7 C0.448,7 0,6.552 0,6 C0,5.448 0.448,5 1,5 L15,5 C15.552,5 16,5.448 16,6 C16,6.552 15.552,7 15,7"></path>
                </g></svg>
       </div>
-      <div class="lesson-link__name brand--ui">{{lesson.title}}</div>
+      <div class="lesson-link__name brand--ui" (click)="goToLesson(lesson)">{{lesson.title}}</div>
       <div class="lesson-link__progress">
           <div class="pie-progress">
               <svg class="pie-progress__pie" width="21px" height="21px">

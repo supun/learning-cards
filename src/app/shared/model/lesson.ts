@@ -3,9 +3,7 @@ export class Lesson{
     constructor(
     public id:number,
     public title: string,
-    public description: string,
-    public flipContentFront:string,
-    public flipContentBack:string) {
+    public description: string) {
 
   }
 
@@ -13,13 +11,11 @@ export class Lesson{
     return json.map(Lesson.fromJson);
 }
 
-  static fromJson({id,title,description,flipContentFront,flipContentBack}):Lesson{
+  static fromJson({id,title,description}):Lesson{
     return new Lesson(
       id,
       title,
-      description,
-      flipContentFront,
-      flipContentBack
+      description
     );
   }
 }

@@ -52,7 +52,8 @@
     font-size: 1.2rem;
     font-family: Merriweather !important;
     font-style: italic;
-    font-weight: 400
+    font-weight: 400;
+    margin-left:3px;
 }
 .lesson-header__title {
     position: relative;
@@ -100,6 +101,7 @@
         min-height: 1px;
         font-family: Merriweather !important;
         padding-bottom: 12rem;
+        margin-left: -2.33333%;
 }
 .block-text p {
     margin-bottom: 3.4rem;

@@ -1,4 +1,4 @@
-import { Component, OnDestroy } from '@angular/core';
+import { Component, OnDestroy,ViewEncapsulation } from '@angular/core';
 import { Subscription }   from 'rxjs/Subscription';
 import {Observable,Subject} from 'rxjs/Rx';
 import { Lesson } from './../../shared/model/lesson';
@@ -8,6 +8,7 @@ import { LessonService } from './../../shared/lesson.service';
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
+  //encapsulation: ViewEncapsulation.None
 })
 export class CardComponent implements OnDestroy {
   lessons:Lesson[];

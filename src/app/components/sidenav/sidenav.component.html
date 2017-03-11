@@ -5,25 +5,14 @@
     <div class="overview-sidebar__header">
       <a class="overview-sidebar__title" href="#/">ECMAScript® 2015</a>
     </div>
-    <div class="overview-sidebar__progress brand--ui"><div class="progress-bar"><div class="progress-bar__line"><div class="progress-bar__fill" style="width: 15%;"></div></div><!-- react-text: 20 -->15<!-- /react-text --><!-- react-text: 21 -->% Complete<!-- /react-text --></div></div>
-<!--<md-progress-bar 
-        [value]="100">
-    </md-progress-bar>
-    <span>100% complete</span>-->
+    <div class="overview-sidebar__progress brand--ui"></div>
+
   </div>
 </div>
 
 <!-- Lessons list -->
 <div class="overview-sidebar__content">
     <md-nav-list class="lesson-lists">
-<!--<a class="lesson-link" md-list-item  *ngFor="let lesson of lessons">
-    <md-icon md-list-icon>format_align_left</md-icon>
-    <span class="brand--ui" (click)="goToLesson(lesson)">{{lesson.title}}</span>
-    <span fxFlex></span>
-   <!-- <button md-icon-button (click)="checkLesson()">
-      <md-icon>check_circle</md-icon>
-    </button>
-  </a>-->
   <li class="lesson-lists__item" md-list-item  *ngFor="let lesson of lessons">
     <a class="lesson-link" >
        <div class="lesson-link__icon">
@@ -34,20 +23,6 @@
                </g></svg>
       </div>
       <div class="lesson-link__name brand--ui" (click)="goToLesson(lesson)">{{lesson.title}}</div>
-      <div class="lesson-link__progress">
-          <div class="pie-progress">
-              <svg class="pie-progress__pie" width="21px" height="21px">
-                <circle class="pie-progress__border pie-progress__border--completed" cx="10.5" cy="10.5" r="8.5"></circle>
-                <circle class="pie-progress__progress brand--stroke brand--fill-opacity brand--fill" cx="10.5" cy="10.5" r="8.5" stroke-dasharray="53.407" stroke-dashoffset="0">
-                  </circle>
-              </svg>
-              <!--<i class="pie-progress__check icon icon-Master-05 pie-progress__check--completed"></i>
-              <button md-icon-button (click)="checkLesson()">
-                       <md-icon>check_circle</md-icon>
-             </button>-->
-              </div>
-              
-      </div>
       </a>
       </li>
 </md-nav-list>

@@ -1,21 +1,27 @@
 export class Lesson{
 
     constructor(
-    public id:number,
-    public title: string,
-    public description: string) {
+    public author:string,
+    public code: string,
+    public description:string,
+    public id: number,
+    public image:Object,
+    public title:string) {
 
-  }
+    }
 
  static fromJsonArray(json: any[]): Lesson[] {
     return json.map(Lesson.fromJson);
 }
 
-  static fromJson({id,title,description}):Lesson{
+  static fromJson({author,code,description,id,image,title}):Lesson{
     return new Lesson(
+      author,
+      code,
+      description,
       id,
-      title,
-      description
+      image,
+      title
     );
   }
 }

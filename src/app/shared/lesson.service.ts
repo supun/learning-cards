@@ -1,3 +1,4 @@
+import { wpObj } from './model/wpObj';
 import { Lesson } from './model/lesson';
 import { Component, Input } from '@angular/core';
 import { Injectable }     from '@angular/core';
@@ -34,10 +35,12 @@ export class LessonService {
   }
 
   getLessionsData():Observable<Lesson[]> {
-    return this.http.get('../environments/lessons.json')
+    return this.http.get('https://learning-cards.000webhostapp.com/index.php/wp-json/acf/v3/posts')
                   .do(console.log)
-                 .map(res => res.json().lessons)
-                 .map(Lesson.fromJsonArray);
+                  .map(res => res.json())
+                 //.map(res => res.json().lessons)
+                 .map(wpObj.fromJsonArray);
+                 //.map(Lesson.fromJsonArray);
   }
 
 }

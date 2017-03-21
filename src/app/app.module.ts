@@ -11,12 +11,14 @@ import 'hammerjs';
 import { AppComponent } from './app.component';
 
 import { RoutingModule } from './app.routing.module';
+import { HighlightJsModule, HighlightJsService } from '../../node_modules/angular2-highlight-js';
 
 import { HomeComponent } from './components/home/home.component';
 import { CardComponent } from './components/card/card.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { LessonService } from './shared/lesson.service';
+import { CodeFormatPipe } from './code-format.pipe';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,7 @@ import { LessonService } from './shared/lesson.service';
     HomeComponent,
     ToolbarComponent,
     SidenavComponent,
+    CodeFormatPipe,
   ],
   imports: [
     BrowserModule,
@@ -32,9 +35,10 @@ import { LessonService } from './shared/lesson.service';
     HttpModule,
     RoutingModule,
     MaterialModule.forRoot(),
-    FlexLayoutModule
+    FlexLayoutModule,
+    HighlightJsModule
   ],
-  providers: [LessonService],
+  providers: [LessonService,HighlightJsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

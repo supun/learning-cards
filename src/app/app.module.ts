@@ -18,7 +18,6 @@ import { CardComponent } from './components/card/card.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { LessonService } from './shared/lesson.service';
-import { CodeFormatPipe } from './code-format.pipe';
 
 @NgModule({
   declarations: [
@@ -26,8 +25,7 @@ import { CodeFormatPipe } from './code-format.pipe';
     CardComponent,
     HomeComponent,
     ToolbarComponent,
-    SidenavComponent,
-    CodeFormatPipe,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,

@@ -36,7 +36,7 @@ export class LessonService {
 
   getLessionsData():Observable<Lesson[]> {
     //return this.http.get('http://mobile-first.me/wp-json/acf/v3/posts')
-    return this.http.get('lessons.json')
+    return this.http.get('https://github.com/supun/learning-cards/blob/master/lessons.json')
                   .do(console.log)
 //                  .map(res => res.json())
             .map(res => res.json().lessons)

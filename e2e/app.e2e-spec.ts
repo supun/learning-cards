@@ -1,6 +1,6 @@
 import { LearningCardsPage } from './app.po';
 
-describe('learning-cards App', function() {
+describe('learning-cards App', () => {
   let page: LearningCardsPage;
 
   beforeEach(() => {

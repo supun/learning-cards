@@ -10,7 +10,7 @@ export class ToolbarComponent implements OnInit {
   @Output() 
   toggle = new EventEmitter();
 
-  onClicked() {
+  onClicked($event) {
     this.toggle.emit();
   }
 

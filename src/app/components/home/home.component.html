@@ -1,11 +1,19 @@
-<md-sidenav-container>
-  <md-sidenav #sidenav>
+<!--<md-sidenav-container>
+  <md-sidenav #sidenav mode="over" class="app-sidenav" [opened]="false">
     <app-sidenav></app-sidenav>
   </md-sidenav>
 
-    <!-- Main content -->
+     Main content
     <app-toolbar (toggle)="onClicked($event)" ></app-toolbar>
     <app-card></app-card>
 
+</md-sidenav-container>-->
+
+<md-sidenav-container class="app-inner">
+    <md-sidenav #sidenav mode="side" class="app-sidenav" [opened]="false">
+      <app-sidenav></app-sidenav>
+    </md-sidenav>    
+    <app-toolbar (toggle)="onClicked($event)" ></app-toolbar>
+    <app-card></app-card>
 </md-sidenav-container>
 

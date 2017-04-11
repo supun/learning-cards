@@ -12,7 +12,7 @@
 
       <!-- this div will fill 100% of the fxLayot, except
       for devices greated than medium, when it will fill 80%  -->
-      <div fxFlex fxFlex.gt-sm="60%">
+      <div fxFlex fxFlex.gt-sm="80%">
 
         <md-card-subtitle class ="lesson-header__counter">Lesson {{ lesson?.id }} of {{lessons?.length}}</md-card-subtitle>
         <md-card-title class="lesson-header__title brand--lhead"> {{ lesson?.title }} </md-card-title>  
@@ -45,13 +45,13 @@
       <!-- fxLayot follows the header definition -->
       
       <div fxLayout="row" fxLayoutAlign="start start" fxLayoutAlign.gt-sm="center start">
-        <div fxFlex fxFlex.gt-sm="60%" class="block-text">
+        <div fxFlex fxFlex.gt-sm="80%" class="block-text">
           <div class="brand--linkColor" [innerHTML]="lesson?.description"></div>
         </div>
       </div>
 
       <div fxLayout="row" fxLayoutAlign="start start" fxLayoutAlign.gt-sm="center start">
-        <div fxFlex fxFlex.gt-sm="60%" class="block-text">
+        <div fxFlex fxFlex.gt-sm="80%" class="block-text">
               <section [innerHTML]="lesson?.code" highlight-js-content=".highlight"></section>
         </div>
       </div>

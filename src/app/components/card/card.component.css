@@ -101,7 +101,6 @@
         min-height: 1px;
         font-family: Merriweather !important;
         padding-bottom: 12rem;
-        margin-left: -2.33333%;
 }
 .block-text p {
     margin-bottom: 3.4rem;
@@ -126,9 +125,9 @@
     -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
+    /*-webkit-;*/
     -ms-flex-pack: center;
-    justify-content: center;
+  /*  ;*/
     height: 100%;
     color: rgba(49, 53, 55, .6);
     border-top: .1rem solid #ddd;
@@ -282,9 +281,9 @@
     -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
+    /*-webkit-;*/
     -ms-flex-pack: center;
-    justify-content: center;
+    /*;*/
     min-height: 40rem
 }
 .block-image--overlay .block-image__image {

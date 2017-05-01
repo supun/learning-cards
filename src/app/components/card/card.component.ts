@@ -32,9 +32,11 @@ export class CardComponent implements OnDestroy  {
     this.subscription = lessonService.selectedLessonSource$.subscribe(
           lesson =>{
             this.lesson = lesson;
-            this.lesson.code = `<pre>
+            if(this.lesson.code.length>0){
+                          this.lesson.code = `<pre>
             <code class="typescript highlight">`+this.lesson.code+`</code>
         <pre>`;
+            }
     });
 
      this.subscription = lessonService.loadedLessonSource$.subscribe(
